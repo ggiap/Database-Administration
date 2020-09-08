@@ -346,10 +346,10 @@ def main():
         elif platform.system() == "Linux":
             os.system("clear")
 
-        connection = mysql.connector.connect(host       = 'dspai.kastoria.teiwm.gr',
-                                             database   = 'world',
-                                             user       = 'georgiap',
-                                             password   = 'K@$t0r1@')
+        connection = mysql.connector.connect(host       = '"""Enter hostname here"""',
+                                             database   = '"""Enter database name here"""',
+                                             user       = '"""Enter username here"""',
+                                             password   = '"""Enter password here"""')
         db_Info = connection.get_server_info()
         print("\nConnected to MySQL Server version ", db_Info)
         cursor = connection.cursor()
