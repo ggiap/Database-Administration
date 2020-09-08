@@ -367,34 +367,6 @@ def main():
             elif platform.system() == "Linux":
                 os.system("clear")
 
-        # DEBUGGING STATEMENTS
-        """
-        insert(cursor, "City", [42898, "Kastoria", "GRE", "", 3000])
-        insert(cursor, "City", ["Kastoria", "GRE", "", 3000])
-        select(cursor, "City", "ID = 42898")
-        update(cursor, "City", "Population", "6000", "ID = 42898")
-        select(cursor, "City", "ID = 5")
-        delete(cursor, "City", "ID = 42898")
-    
-        insert(cursor, "CountryLanguage", ("GRE", "Gree", True, 99.0))
-        select(cursor, "CountryLanguage", "Percentage = 99")
-        update(cursor, "CountryLanguage", "Percentage", "98.0", "Language = 'Gree'")
-        delete(cursor, "CountryLanguage", "Language = 'Gree'")
-    
-        create_table(cursor, "Logs")
-        create_trigger(cursor, "City", "georgiap_tr1", "INSERT")
-        create_trigger(cursor, "City", "georgiap_tr2", "UPDATE")
-        create_trigger(cursor, "City", "georgiap_tr3", "DELETE")
-        create_trigger(cursor, "CountryLanguage", "georgiap_tr4", "INSERT")
-        create_trigger(cursor, "CountryLanguage", "georgiap_tr5", "UPDATE")
-        create_trigger(cursor, "CountryLanguage", "georgiap_tr6", "DELETE")
-    
-        create_procedure(cursor, "City", "Population > 5000000")
-        call_procedure(cursor)
-    
-        transaction(cursor)
-        """
-
     except Error as e:
         print("\nError while trying to connect to MySQL", e, '\n')
         exit()
